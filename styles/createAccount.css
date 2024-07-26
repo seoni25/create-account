@@ -1,0 +1,75 @@
+/*초기화*/
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+/*레이아웃 설정*/
+body{
+	background-color: lightpink;
+	padding: 30px;
+}
+#container {
+	width: 35vw;
+	margin: 0 auto;
+	padding: 10px;
+	border-radius: 20px;
+	background-color: white;
+}
+header, main, footer{
+	margin: 10px;
+	padding: 20px;
+}
+#idBox, #passwordBox, #pwCheckBox, #nameBox, #phoneBox, #emailBox{
+	margin: 20px 0px;
+}
+#idBox {
+	margin-top: 0px;
+}
+#emailBox {
+	margin-bottom: 0px;
+}
+.inputBox{
+	width: auto;
+	margin: 5px 0px 5px 0px;
+	padding: 10px;
+	border: 1px solid lightgrey;
+	border-radius: 10px;
+}
+input{
+	width: 95%;
+	padding: 2%;
+	background-color: transparent;
+	font-size: large;
+	color: lightgrey;
+	border:0px;
+}
+#id {
+	width: 70%;
+}
+#validation{
+	float:right;
+	width: 20%;
+	padding: 1.5%;
+	font-size: medium;
+	font-weight: bold;
+	border:0;
+	border-radius: 10px;
+	background-color: lightgrey;
+}
+#email {
+	width: 45%;
+}
+#weblist{
+	width: 40%;
+	height: 40px;
+	font-size: medium;
+}
+input[type="submit"], input[type="reset"]{
+	width: 45%;
+	margin-left:2.5%;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: lightgrey;
+	color:white;
+}

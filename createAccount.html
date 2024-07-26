@@ -1,0 +1,104 @@
+<!--레퍼런스: https://firstlife-note.tistory.com/75 
+https://choiiis.github.io/web/toy-project-sign-up-and-in-page/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/createAccount.css"/>
+	<script src="scripts/createAccount.js"></script>
+	<title>create account</title>
+</head>
+<body>
+	<form>
+		<div id="container">
+			<header>
+				<h2>회원가입</h2><br>
+				<p>회원가입을 통해 다양한 서비스를 경험하세요!</p>
+			</header>
+
+			<main>
+				<div id = "idBox">
+					<label><h4>아이디</h4>
+					<div class="inputBox">
+						<input type="text" id="id" value="아이디입력(6자~20자)" onclick="input(this)"required /></label>
+						<button id="validation" onclick="checkValidId()" required>중복확인</button>
+					</div>
+				</div>
+
+				<div id = "passwordBox">
+					<label><h4>비밀번호</h4>
+					<div class="inputBox">
+						<input type="text" id="password" value="비밀번호 입력(8~20자)" onclick="input(this); checkValidPW();" required/>
+					</label>
+					</div>
+				</div>
+
+				<div id = "pwCheckBox">
+					<label><h4>비밀번호 확인</h4>
+					<div class="inputBox">
+						<input type="text" id="pwCheck" value="비밀번호 재입력" onclick="input(this); checkPW();" required/>
+					</label>
+					</div>
+				</div>
+
+				<div id = "nameBox">
+					<label><h4>이름</h4>
+					<div class="inputBox">
+						<input type="text" id="name" value="이름을 입력해주세요" onclick="input(this)" required/>
+					</label>
+					</div>
+				</div>
+
+				<!--<div id = "birthBox">
+					<label id="birth"><h4>생년월일</h4>
+					<div class="inputBox">
+						<input type="number" id="year" min=1900 max=2024 required/>년
+						<input type="number" id="month" min=1 max=12 required/>월
+						<input type="number" id="date" min="1" max="31" required>일
+					</label>
+					</div>
+				</div>
+
+				<div id="genderBox">
+					<label id="gender"><h4>성별</h4>
+					<div class="inputBox">
+						<input type="radio" name="gender" id="man" value="man"/><label for="man">남</label>
+						<input type="radio" name="gender" id="woman" value="woman"/><label for="woman">여</label>
+					</div>
+				</div>-->
+
+				<div id = "phoneBox">
+					<label><h4>전화번호</h4>
+					<div class="inputBox">
+						<input type="text" id="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" value="휴대폰 번호 입력('-'제외 11자리 입력)" onclick="input(this)" required/>
+					</label>
+					</div>
+				</div>
+
+				<div id = "emailBox">
+					<label><h4>이메일 주소</h4>
+					<div class="inputBox">
+						<input type="text" id="email" value="이메일 입력" onclick="input(this)"/> @
+						<select id="weblist" required>
+							<option disabled value="" selected>선택</option>
+							<option value="naver.com">naver.com</option>
+							<option value="hanmail.net">hanmail.net</option>
+							<option value="google.com">google.com</option>
+							<option value="nate.com">nate.com</option>
+							<option value="">직접 입력</option>
+						</select>
+					</label>
+					</div>
+				</div>
+			</main>
+
+			<footer>
+				<input type="submit" value="가입하기" onclick="submit()"/>
+				<input type="reset" value="다시 쓰기"/>
+			</footer>
+		</div>
+	</form>
+</body>
+</html>
