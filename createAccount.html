@@ -20,59 +20,42 @@ https://choiiis.github.io/web/toy-project-sign-up-and-in-page/
 
 			<main>
 				<div id = "idBox">
-					<label><h4>아이디</h4>
+					<label><h4>아이디</h4><span> *필수항목입니다</span>
 					<div class="inputBox">
 						<input type="text" id="id" value="아이디입력(6자~20자)" onclick="input(this)"required /></label>
 						<button id="validation" onclick="checkValidId()" required>중복확인</button>
 					</div>
+					
 				</div>
 
 				<div id = "passwordBox">
-					<label><h4>비밀번호</h4>
+					<label><h4>비밀번호</h4><span> *필수항목입니다</span>
 					<div class="inputBox">
-						<input type="text" id="password" value="비밀번호 입력(8~20자)" onclick="input(this); checkValidPW();" required/>
-					</label>
+						<input type="text" id="password" value="비밀번호 입력(8~20자)" onclick="input(this)" onchange="checkValidPW()" required/>
+					</label><img src="images/check.png" id="validPW1"/>
 					</div>
 				</div>
 
 				<div id = "pwCheckBox">
-					<label><h4>비밀번호 확인</h4>
+					<label><h4>비밀번호 확인</h4><span> *필수항목입니다</span>
 					<div class="inputBox">
-						<input type="text" id="pwCheck" value="비밀번호 재입력" onclick="input(this); checkPW();" required/>
-					</label>
+						<input type="text" id="pwCheck" value="비밀번호 재입력" onclick="input(this)" onchange="checkPW()" required/>
+					</label><img src="images/check.png" id="validPW2"/>
 					</div>
 				</div>
 
 				<div id = "nameBox">
-					<label><h4>이름</h4>
+					<label><h4>이름</h4><span> *필수항목입니다</span>
 					<div class="inputBox">
 						<input type="text" id="name" value="이름을 입력해주세요" onclick="input(this)" required/>
 					</label>
 					</div>
 				</div>
 
-				<!--<div id = "birthBox">
-					<label id="birth"><h4>생년월일</h4>
-					<div class="inputBox">
-						<input type="number" id="year" min=1900 max=2024 required/>년
-						<input type="number" id="month" min=1 max=12 required/>월
-						<input type="number" id="date" min="1" max="31" required>일
-					</label>
-					</div>
-				</div>
-
-				<div id="genderBox">
-					<label id="gender"><h4>성별</h4>
-					<div class="inputBox">
-						<input type="radio" name="gender" id="man" value="man"/><label for="man">남</label>
-						<input type="radio" name="gender" id="woman" value="woman"/><label for="woman">여</label>
-					</div>
-				</div>-->
-
 				<div id = "phoneBox">
-					<label><h4>전화번호</h4>
+					<label><h4>전화번호</h4><span> *필수항목입니다</span>
 					<div class="inputBox">
-						<input type="text" id="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" value="휴대폰 번호 입력('-'제외 11자리 입력)" onclick="input(this)" required/>
+						<input type="text" id="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" value="휴대폰 번호 입력('-'제외 11자리 입력)" onclick="input(this)" onchange="checkPhone()" required/><img src="images/check.png" id="validPW3"/>
 					</label>
 					</div>
 				</div>

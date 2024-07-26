@@ -65,9 +65,10 @@ function checkValidId(){
 function checkValidPW(){
 	/*검사 순서: 공백->길이*/
 	let password = document.getElementById("password").value;
+	let validIcon = document.getElementById("validPW1");
 	let validation1 = false;/*공백 검사*/
 	let validation2 = false;/*길이 검사*/
-
+	
 	/*1.공백검사
 		1-1.만약 공백이 있으면->공백 있다고 알리고 입력칸을 비운다.
 		1-2.공백이 없으면 다음 조건 체크로 넘어간다.
@@ -93,12 +94,37 @@ function checkValidPW(){
 			validation2 = false;
 		} else {
 			validation2 = true;
-			alert("유효한 비밀번호 입니다");
+			alert("유효한 비밀번호입니다");
+			validIcon.style.visibility = "visible";
 		}
 	}
 }
 
-/*비밀번호 재검사*/
+/*비밀번호 비교*/
 function checkPW(){
+	let password = document.getElementById("password").value;
+	let pwCheck = document.getElementById("pwCheck").value;
+	let validIcon = document.getElementById("validPW2");
 
+	if(password == pwCheck){
+		validIcon.style.visibility = "visible";
+	} else {
+		pwCheck = "";
+		alert("비밀번호가 다릅니다.");
+	}
 }
+
+/*전화번호 정규식*/
+function checkPhone(){
+	let phone = document.getElementById("phone").value;
+	let regular = /^([0-9]{3})-?([0-9]{3,4})-?([0-9]{4})$/;
+	let validIcon = document.getElementById("validPW3");
+
+	if(regular.test(phone) == true){
+		validIcon.style.visibility = "visible";		
+	} else {
+		phone="";
+		alert("휴대폰 번호가 아닙니다.");
+	}
+}
+

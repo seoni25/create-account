@@ -20,6 +20,12 @@ header, main, footer{
 	margin: 10px;
 	padding: 20px;
 }
+h4{
+	display: inline;
+}
+span{
+	color:red;
+}
 #idBox, #passwordBox, #pwCheckBox, #nameBox, #phoneBox, #emailBox{
 	margin: 20px 0px;
 }
@@ -44,7 +50,7 @@ input{
 	color: lightgrey;
 	border:0px;
 }
-#id {
+#id, #password, #pwCheck, #phone {
 	width: 70%;
 }
 #validation{
@@ -56,6 +62,12 @@ input{
 	border:0;
 	border-radius: 10px;
 	background-color: lightgrey;
+}
+img {
+	width:5%;
+	float: right;
+	padding: 1.5%;
+	visibility: hidden;
 }
 #email {
 	width: 45%;
