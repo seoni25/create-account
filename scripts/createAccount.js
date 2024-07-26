@@ -19,7 +19,7 @@ function checkValidId(){
 		if(id[i] == ' '){
 			alert("공백제외 6자에서 20자 사이의 문자와 숫자만 사용가능합니다");
 			validation1 = false;
-			id = "";
+			id = "아이디입력(6자~20자)";
 		}else{
 			validation1 = true;
 		}
@@ -32,7 +32,7 @@ function checkValidId(){
 	if(validation1 == true){
 		if(id.length < 6 || id.length > 20){
 			alert("6자에서 20자 사이의 문자와 숫자만 사용가능합니다");
-			id = "";
+			id = "아이디입력(6자~20자)";
 			validation2 = false;
 		} else {
 			validation2 = true;
@@ -46,7 +46,7 @@ function checkValidId(){
 	if(validation2 == true){
 		if(idArray.includes(id)){
 			alert("이미 존재하는 아이디입니다.");
-			id="";
+			id="아이디입력(6자~20자)";
 			validation3 = false;
 		} else {
 			alert("사용할 수 있는 아이디입니다.");
@@ -77,7 +77,8 @@ function checkValidPW(){
 		if(password[i] == ' '){
 			alert("공백제외 8자에서 20자 사이의 문자와 숫자만 사용가능합니다");
 			validation1 = false;
-			password = "";
+			password = "비밀번호 입력(8~20자)";
+			validIcon.style.visibility = "hidden";
 		}else{
 			validation1 = true;
 		}
@@ -90,8 +91,9 @@ function checkValidPW(){
 	if(validation1 == true){
 		if(password.length < 8 || password.length > 20){
 			alert("8자에서 20자 사이의 문자와 숫자만 사용가능합니다");
-			password = "";
+			password = "비밀번호 입력(8~20자)";
 			validation2 = false;
+			validIcon.style.visibility = "hidden";
 		} else {
 			validation2 = true;
 			alert("유효한 비밀번호입니다");
@@ -109,7 +111,8 @@ function checkPW(){
 	if(password == pwCheck){
 		validIcon.style.visibility = "visible";
 	} else {
-		pwCheck = "";
+		pwCheck = "비밀번호 재입력";
+		validIcon.style.visibility = "hidden";
 		alert("비밀번호가 다릅니다.");
 	}
 }
@@ -123,7 +126,8 @@ function checkPhone(){
 	if(regular.test(phone) == true){
 		validIcon.style.visibility = "visible";		
 	} else {
-		phone="";
+		phone="휴대폰 번호 입력('-'제외 11자리 입력)";
+		validIcon.style.visibility = "hidden";
 		alert("휴대폰 번호가 아닙니다.");
 	}
 }
