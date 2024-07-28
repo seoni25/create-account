@@ -19,7 +19,8 @@ function checkValidId(){
 		if(id[i] == ' '){
 			alert("공백제외 6자에서 20자 사이의 문자와 숫자만 사용가능합니다");
 			validation1 = false;
-			id = "아이디입력(6자~20자)";
+			break;
+			/*id = "아이디입력(6자~20자)";*/
 		}else{
 			validation1 = true;
 		}
@@ -32,7 +33,7 @@ function checkValidId(){
 	if(validation1 == true){
 		if(id.length < 6 || id.length > 20){
 			alert("6자에서 20자 사이의 문자와 숫자만 사용가능합니다");
-			id = "아이디입력(6자~20자)";
+			/*id = "아이디입력(6자~20자)";*/
 			validation2 = false;
 		} else {
 			validation2 = true;
@@ -43,10 +44,10 @@ function checkValidId(){
 		3-1. id가 이미 존재할 때
 		3-2. id가 존재하지 않을 때 -> 배열에 id를 넣기
 	*/
-	if(validation2 == true){
+	if(validation1 == true && validation2 == true){
 		if(idArray.includes(id)){
 			alert("이미 존재하는 아이디입니다.");
-			id="아이디입력(6자~20자)";
+			/*id="아이디입력(6자~20자)";*/
 			validation3 = false;
 		} else {
 			alert("사용할 수 있는 아이디입니다.");
@@ -54,7 +55,7 @@ function checkValidId(){
 		}
 	}
 
-	if(validation3 == true){
+	if(validation1 == true && validation2 == true && validation3 == true){
 		idArray.push(id);
 	}
 
@@ -77,8 +78,9 @@ function checkValidPW(){
 		if(password[i] == ' '){
 			alert("공백제외 8자에서 20자 사이의 문자와 숫자만 사용가능합니다");
 			validation1 = false;
-			password = "비밀번호 입력(8~20자)";
+			/*password = "비밀번호 입력(8~20자)";*/
 			validIcon.style.visibility = "hidden";
+			break;
 		}else{
 			validation1 = true;
 		}
@@ -91,7 +93,7 @@ function checkValidPW(){
 	if(validation1 == true){
 		if(password.length < 8 || password.length > 20){
 			alert("8자에서 20자 사이의 문자와 숫자만 사용가능합니다");
-			password = "비밀번호 입력(8~20자)";
+			/*password = "비밀번호 입력(8~20자)";*/
 			validation2 = false;
 			validIcon.style.visibility = "hidden";
 		} else {
